@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nội Thất An Gia</title>
+
+    <link href="bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/icon/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+<body>
+    
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="img/logo.png" alt="" class="img-fluid"></a>
+      <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Trang Chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Thông Báo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Thông Tin Cá Nhân</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Cài Đặt</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown01">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-info" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="nav-scroller bg-body shadow-sm">
+    <nav class="nav nav-underline" aria-label="Secondary navigation">
+      <a class="nav-link active" aria-current="page" href="index.html">Trang Chủ</a>
+      <a class="nav-link" href="product.html">Sản Phẩm</a>
+      <a class="nav-link" href="product.html">Bàn</a>
+      <a class="nav-link" href="product.html">Ghế</a>
+      <a class="nav-link" href="product.html">Tủ</a>
+      <a class="nav-link" href="product.html">Sofa</a>
+      <a class="nav-link" href="product.html">Kệ</a>
+      <a class="nav-link" href="product.html">Giường</a>
+      <button class="btn ms-auto" data-bs-toggle="modal" data-bs-target="#loginRegisterModal"><i class="bi bi-person-fill mx-2"></i>Đăng Nhập</button>
+      <button type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas"><i class="bi bi-cart mx-2"></i>Giỏ hàng</button>
+    </nav>
+    <div class="offcanvas offcanvas-end" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel" data-bs-backdrop="false">
+      <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="cartOffcanvasLabel">Giỏ hàng của bạn</h5>
+      </div>
+      <div class="offcanvas-body">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Đóng"></button>
+          <p>Đây là giỏ hàng của bạn. Bạn có thể đặt các mặt hàng và thông tin khác vào đây.</p>
+          <div class="offcanvas-footer">
+              <a href="shopping_cart.html" class="btn btn-outline-info text-center">Xác Nhận Đơn Hàng</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- modal -->
+<div class="modal fade" id="loginRegisterModal" tabindex="-1" aria-labelledby="loginRegisterModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="loginRegisterModalLabel">Đăng Nhập</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <form>
+              <div class="mb-2">
+                <label for="loginEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
+              </div>
+              <div class="mb-2">
+                <label for="loginPassword" class="form-label">Mật Khẩu</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+              </div>
+              <div class="input-group mb-2 d-flex justify-content-between">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="formCheck">
+                    <label for="formCheck" class="form-check-label text-secondary"><small>Ghi Nhớ</small></label>
+                </div>
+                <div class="forgot">
+                    <small><a href="#">Quên Mật Khẩu?</a></small>
+                </div>
+              </div>
+              <div class="text-center mb-3">
+                <button type="submit" class="btn btn-lg btn-outline-info w-100">Đăng Nhập</button>
+            </div>
+            <div class="input-group mb-3">
+                <button class="btn btn-lg btn-light w-100 fs-6">
+                    <i class="bi bi-google"></i>
+                    <small>Đăng Nhập bằng Google</small>
+                </button>
+            </div>
+              <div class="register text-center mt-3">
+                <p>Bạn Chưa Có Tài Khoản?<a href="register.html"> Đăng Ký</a></p>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<main>
+<div class="container-fluid bg-light">
+    <div class="container pt-3 pb-3 product-detail">
+        <div class="card">
+            <div class="row g-0">
+                <div class="col-md-6 border-end">
+                <div class="d-flex flex-column justify-content-center">
+                    <div class="main_image">
+                    <img src="https://i.imgur.com/TAzli1U.jpg" id="main_product_image" width="350">
+                    </div>
+                    <div class="thumbnail_images">
+                    <ul id="thumbnail">
+                        <li><img onclick="changeImage(this)" src="https://i.imgur.com/TAzli1U.jpg" width="70"></li>
+                        <li><img onclick="changeImage(this)" src="https://i.imgur.com/w6kEctd.jpg" width="70"></li>
+                        <li><img onclick="changeImage(this)" src="https://i.imgur.com/L7hFD8X.jpg" width="70"></li>
+                        <li><img onclick="changeImage(this)" src="https://i.imgur.com/6ZufmNS.jpg" width="70"></li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-6">
+                <div class="p-3 right-side">
+                    <div class="d-flex justify-content-between align-items-center">
+                    <h3>IIlana</h3>
+                    <span class="heart"><i class='bx bx-heart'></i></span>
+                    </div>
+                    <div class="mt-2 pr-3 content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    </div>
+                    <h3>$430.99</h3>
+                    <div class="ratings d-flex flex-row align-items-center">
+                    <div class="d-flex flex-row">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bx-star'></i>
+                    </div>
+                    <span>441 reviews</span>
+                    </div>
+                    <div class="mt-5">
+                    <span class="fw-bold">Color</span>
+                    <div class="colors">
+                        <ul id="marker">
+                        <li id="marker-1"></li>
+                        <li id="marker-2"></li>
+                        <li id="marker-3"></li>
+                        <li id="marker-4"></li>
+                        <li id="marker-5"></li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="buttons d-flex flex-row mt-5 gap-3">
+                    <button class="btn btn-outline-dark">Buy Now</button>
+                    <button class="btn btn-dark">Add to Basket</button>
+                    </div>
+                    <div class="search-option">
+                    <i class='bi bi-search first-search'></i>
+                    <div class="inputs">
+                        <input type="text" name="">
+                    </div>
+                    <i class='bx bx-share-alt share'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="button-container pt-3 pb-3">
+        <button class="btn btn-primary" onclick="showPage('description')">Mô tả</button>
+        <button class="btn btn-primary" onclick="showPage('feedback')">Góp ý</button>
+        <button class="btn btn-primary" onclick="showPage('ratings')">Đánh giá</button>  
+    </div>
+    <div class="container bg-white p-3" style="border-radius: 5px;">
+        <div id="description" class="page">
+          <h2>Mô tả</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non dolor eget nunc condimentum tincidunt. Sed eget arcu risus. Sed mattis venenatis arcu, ac malesuada neque gravida eu. Vivamus tincidunt euismod dui, at viverra leo consectetur eu. Nunc malesuada hendrerit nibh, non tempus lacus fringilla id. Suspendisse sed ligula purus. Nam ut congue nunc. Duis lacinia elit sed turpis lacinia iaculis. Nullam efficitur rutrum turpis, ut interdum nulla pharetra id. Duis posuere tincidunt odio, et sollicitudin arcu tempus a.</p>
+        </div>
+      
+        <div id="feedback" class="page">
+          <h2>Góp ý</h2>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Tên</label>
+              <input type="text" class="form-control" id="name" placeholder="Nhập tên của bạn">
+            </div>
+            <div class="mb-3">
+              <label for="comment" class="form-label">Góp ý của bạn</label>
+              <textarea class="form-control" id="comment" rows="3" placeholder="Nhập góp ý"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Gửi góp ý</button>
+          </form>
+        </div>
+      
+        <div id="ratings" class="page">
+          <h2>Đánh giá</h2>
+          <div class="mb-3">
+            <div class="d-flex align-items-center">
+              <span class="fw-bold me-2">Người dùng A:</span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+            </div>
+            <p class="mb-0">Sản phẩm rất tuyệt vời!</p>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex align-items-center">
+              <span class="fw-bold me-2">Người dùng B:</span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </div>
+            </div>
+            <p class="mb-0">Sản phẩm khá tốt!</p>
+          </div>
+          <div class="mb-3">
+            <div class="d-flex align-items-center">
+              <span class="fw-bold me-2">Người dùng C:</span>
+              <div class="rating-stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </div>
+            </div>
+            <p class="mb-0">Sản phẩm không tương xứng với giá trị.</p>
+          </div>
+        </div>
+    </div>
+
+    <div class="related-products container pt-3">
+        <h3 class="text-center">Sản Phẩm Tương Tự</h3>
+        <div class="owl-carousel">
+            <div class="item">
+                <div class="card">
+                    <img src="img/banner.jpg" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 3</h5>
+                        <p class="card-text">Mô tả sản phẩm 3.</p>
+                        <p class="card-text">Giá: $250</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="img/logo.png" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 3</h5>
+                        <p class="card-text">Mô tả sản phẩm 3.</p>
+                        <p class="card-text">Giá: $250</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="img/banner.jpg" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 3</h5>
+                        <p class="card-text">Mô tả sản phẩm 3.</p>
+                        <p class="card-text">Giá: $250</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="img/banner.jpg" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 3</h5>
+                        <p class="card-text">Mô tả sản phẩm 3.</p>
+                        <p class="card-text">Giá: $250</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src="img/banner.jpg" class="card-img-top" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Sản phẩm 3</h5>
+                        <p class="card-text">Mô tả sản phẩm 3.</p>
+                        <p class="card-text">Giá: $250</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </div>
+</div>
+<div class="back-to-top bg-light">
+  <p class="text-end"><a href="#"><i class="bi bi-arrow-up-square-fill"></i></a></p>
+</div>
+<div class="container-fluid">
+  <div class="menu-bottom row">
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <h4>Liên Hệ Với An Gia</h4>
+      <hr>
+      <ul>
+        <li><img src="img/logo.png" alt="" style="width: 50%; height: 50%; object-fit: cover;"></li>
+        <li>Follow Us</li>
+        <li>Twitter - FaceBook - Youtube</li>
+        <li><button class="btn btn-outline-info">Hệ Thống An GIa</button></li>
+      </ul>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <h4>An Gia</h4>
+      <hr>
+      <ul>
+        <li>Giới Thiệu</li>
+        <li>Tuyển Dụng</li>
+        <li>Thẻ Thành Viên</li>
+        <li>Đổi Trả Hàng</li>
+      </ul>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <h4>Chuyên Mục An Gia</h4>
+      <hr>
+      <ul>
+        <li>Căn Hộ Mẫu</li>
+        <li>Sản Phẩm</li>
+        <li>Ý Tưởng Và Cảm Hứng</li>
+      </ul>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12">
+      <h4>NEWSLETTER</h4>
+      <hr>
+      <ul>
+        <li>Hãy để lại email của bạn để nhận được những ý tưởng trang trí mới và những thông tin, ưu đãi từ Nội Thất An Gia.</li>
+        <li>Email: xxx@gmail.com</li>
+        <li>Hotline: 180xxxx</li>
+        <li>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<footer>
+  <p class="text-center">&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+</footer>
+</main>
+
+
+  <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+  <script src="js/script.js"></script>
+    
+</body>
+</html>
